@@ -7,7 +7,7 @@
 <body>
     <nav>
         <div class="naw-wrapper">
-            <a class="brand-logo center">
+            <a class="brand-logo left" >
                 Shopping
             </a>
         </div>
@@ -49,6 +49,26 @@
             }
         }
 
+    </script>
+    <script>
+        var mysql      = require('mysql');
+        var connection = mysql.createConnection({
+            host     : 'localhost',
+            user     : 'admin',
+            password : 'uatao',
+            database : 'shop_db'
+        });
+
+        connection.connect();
+
+        sql = 'SELECT * FROM items';
+
+        connection.query(sql, function (error, results, fields) {
+            if (error) throw error;
+            console.log('The solution is: ', results);
+        });
+
+        connection.end();
     </script>
 </body>
 </html>

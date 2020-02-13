@@ -5,12 +5,15 @@ const path = require('path');
 const {app, BrowserWindow, Menu, ipcMain} = electron;
 
 //set env
-process.env.NODE_ENV = 'production';
+//process.env.NODE_ENV = 'production';
 
 let mainWindow;
 
 app.on('ready', function () {
+
     mainWindow = new BrowserWindow({
+        width: 1000,
+        height: 500,
         webPreferences: {
             nodeIntegration: true
         }
