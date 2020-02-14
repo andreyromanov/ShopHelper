@@ -12,15 +12,18 @@ let mainWindow;
 app.on('ready', function () {
 
     mainWindow = new BrowserWindow({
-        width: 1000,
-        height: 500,
+        width: 1500,
+        height: 800,
+        'minWidth': 1200,
+        'minHeight': 700,
         webPreferences: {
             nodeIntegration: true
         }
     });
 
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'mainWindow.html'),
+        //pathname: path.join(__dirname, 'mainWindow.html'),
+        pathname: path.join(__dirname, './components/index.html'),
         protocol: 'file:',
         slashes: true
     }));

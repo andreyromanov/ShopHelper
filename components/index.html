@@ -1,0 +1,174 @@
+<html>
+<head>
+    <title>Shopping</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div class="">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Главная</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Посылки</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Оформить</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="height: auto">
+            <div class="container-fluid border" >
+                <div class="row pt-3">
+                    <div class="col-md-6">
+                        <select name="" id="" class="form-control" style="width: 300px">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="exe" type="text" style="width: 400px">
+                        <button onclick="exe()" class="btn btn-success ml-3 px-4">OK</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6" style="max-height: 80vh;overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">dda1</th>
+                                <td>sadsadasda</td>
+                                <td>sss</td>
+                                <td>@dddd</td>
+                                <td>@asdads</td>
+                                <td>@adasdadas</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="col-md-12 border" style="max-height:40vh;overflow: auto">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <label for="">Не из списка</label>
+                        <div class="col-md-12 border" style="max-height: 35vh;overflow: auto">
+
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade border" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <input type="text">
+        </div>
+        <div class="tab-pane fade border" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <input type="text">
+        </div>
+    </div>
+</div>
+
+<script>
+    window.jQuery = window.$ = require('jquery');
+</script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script>
+
+    var mysql      = require('mysql');
+    var connection = mysql.createConnection({
+        host     : 'localhost',
+        user     : 'admin',
+        password : 'uatao',
+        database : 'shop_db'
+    });
+
+    connection.connect();
+
+    sql = 'SELECT * FROM items';
+
+    connection.query(sql, function (error, results, fields) {
+        if (error) throw error;
+        console.log('The solution is: ', results);
+    });
+
+    connection.end();
+</script>
+<script>
+    function exe() {
+        const exec = require('child_process').exec;
+        exec('../commands/cmd.sh', function (err, stdout, stderr) {
+            document.getElementById('exe').value = stdout;
+            console.log(stdout);
+        });
+    }
+</script>
+</body>
+</html>
