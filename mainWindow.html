@@ -3,6 +3,7 @@
     <title>Shopping</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="photon.min.css">
 </head>
 <body>
     <nav>
@@ -12,6 +13,19 @@
             </a>
         </div>
     </nav>
+    <form>
+        <div class="form-group">
+            <label>Название</label>
+            <input id="name" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Цена</label>
+            <input id="price" type="text" class="form-control">
+        </div>
+    </form>
+    <button id="btnCreate">Создать</button>
+    <button id="btnRead">Показать</button>
+    <button id="btnDelete">Удалить</button>
     <h3></h3>
     <ul></ul>
     <script>
@@ -69,6 +83,9 @@
         });
 
         connection.end();
+    </script>
+    <script>
+        require('./scripts/log.js')
     </script>
 </body>
 </html>
