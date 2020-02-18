@@ -127,7 +127,27 @@
             <input type="text">
         </div>
         <div class="tab-pane fade border" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-            <input type="text">
+            <form action="" style="width: 100%">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div>
+                                <label>Отправитель</label>
+                                <input type="text" id="sender" autofocus class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <label>Получатель</label>
+                                <input type="text" id="receiver" autofocus class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success m-3" type="submit">
+                        Оформить
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -166,9 +186,35 @@
         const exec = require('child_process').exec;
         exec('../commands/cmd.sh', function (err, stdout, stderr) {
             document.getElementById('exe').value = stdout;
-            console.log(stdout);
+            //console.log(stdout);
         });
     }
+</script>
+<script>
+    const electron = require('electron');
+    const {ipcRenderer} = electron;
+
+    const form =  document.querySelector('form');
+    form.addEventListener('submit', submitForm);
+
+    function submitForm(e){
+        e.preventDefault();
+        const sender = document.querySelector('#sender').value;
+        const receiver = document.querySelector('#receiver').value;
+
+        let declaration = {
+            sender: sender,
+            receiver: receiver
+        };
+
+        ipcRenderer.send('declaration:add', declaration);
+    }
+
+    ipcRenderer.on('declaration:add', function (e, declaration) {
+        document.querySelector('#sender').value = "";
+        document.querySelector('#receiver').value = "";
+        console.log(declaration)
+    })
 </script>
 </body>
 </html>

@@ -1,26 +1,143 @@
 <html>
 <head>
     <title>Shopping</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<nav>
-    <div class="naw-wrapper">
-        <a class="brand-logo left" >
-            Shopping
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="index.html">Данные</a></li>
-            <li><a href="package.html">Посылка</a></li>
-            <li><a href="send.html">Почта</a></li>
-            <li><a href="about.html">О нас</a></li>
+<nav class="navbar navbar-expand navbar-light bg-light justify-content-between">
+    <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
+        <ul id="nav-mobile" class="navbar-nav"  style="float: right!important;">
+            <li class="nav-item active"><a href="main.html" class="nav-link">Данные</a></li>
+            <li class="nav-item active"><a href="package.html" class="nav-link">Посылка</a></li>
+            <li class="nav-item active"><a href="send.html" class="nav-link">Почта</a></li>
+            <li class="nav-item active"><a href="about.html" class="nav-link">О нас</a></li>
         </ul>
     </div>
 </nav>
-отправить
+
+    <div class="container-fluid pt-3">
+        <div class="row">
+            <div class="col-md-5 border">
+                <div>
+
+                </div>
+            </div>
+            <div class="col-md-7">
+                    <div class="container-fluid">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Создать</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Печать</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="height: auto">
+                                <form action="" style="width: 100%">
+                                    <div class="row py-3">
+                                        <div class="col-md-6 border">
+                                            <div>
+                                                <label>Отправитель</label>
+                                                <input type="text" id="sender1" autofocus class="">
+                                            </div>
+                                            <div>
+                                                <label>Отправитель</label>
+                                                <input type="text" id="sender2" autofocus class=>
+                                            </div>
+                                            <div>
+                                                <label>Отправитель</label>
+                                                <input type="text" id="sender3" autofocus class="">
+                                            </div>
+                                            <div>
+                                                <label>Отправитель</label>
+                                                <input type="text" id="sender4" autofocus class="">
+                                            </div>
+                                            <div>
+                                                <label>Отправитель</label>
+                                                <input type="text" id="sender5" autofocus class="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 border">
+                                            <div>
+                                                <label>Получатель</label>
+                                                <input type="text" id="receiver1" autofocus class="">
+                                            </div>
+                                            <div>
+                                                <label>Получатель</label>
+                                                <input type="text" id="receiver2" autofocus class="">
+                                            </div>
+                                            <div>
+                                                <label>Получатель</label>
+                                                <input type="text" id="receiver3" autofocus class="">
+                                            </div>
+                                            <div>
+                                                <label>Получатель</label>
+                                                <input type="text" id="receiver4" autofocus class="">
+                                            </div>
+                                            <div>
+                                                <label>Получатель</label>
+                                                <input type="text" id="receiver5" autofocus class="">
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-success m-3 mx-auto" type="submit">
+                                            Оформить
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade border" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <button class="btn btn-success m-3 mx-auto" type="submit">
+                                    Оформить
+                                </button>
+                                <button class="btn btn-warning m-3 mx-auto" type="submit">
+                                    Оформить
+                                </button>
+                                <button class="btn btn-primary m-3 mx-auto" type="submit">
+                                Оформить
+                                </button>
+
+                            </div>
+                        </div>
+                     </div>
+
+                </div>
+            </div>
+         </div>
+    </div>
+
 <script>
-    require('./scripts/log.js')
+    window.jQuery = window.$ = require('jquery');
+</script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script>
+    const electron = require('electron');
+    const {ipcRenderer} = electron;
+
+    const form =  document.querySelector('form');
+    form.addEventListener('submit', submitForm);
+
+    function submitForm(e){
+        e.preventDefault();
+        const sender = document.querySelector('#sender').value;
+        const receiver = document.querySelector('#receiver').value;
+
+        let declaration = {
+            sender: sender,
+            receiver: receiver
+        };
+
+        ipcRenderer.send('declaration:add', declaration);
+    }
+
+    ipcRenderer.on('declaration:add', function (e, declaration) {
+        document.querySelector('#sender').value = "";
+        document.querySelector('#receiver').value = "";
+        console.log(declaration)
+    })
 </script>
 </body>
 </html>

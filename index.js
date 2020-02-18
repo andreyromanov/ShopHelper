@@ -1,9 +1,11 @@
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
+var mysql      = require('mysql2');
 
 const {app, BrowserWindow, Menu, ipcMain} = electron;
-
+//const ejs = require('ejs');
+//const ejs = require('ejs-electron')
 //set env
 //process.env.NODE_ENV = 'production';
 
@@ -12,8 +14,8 @@ let mainWindow;
 app.on('ready', function () {
 
     mainWindow = new BrowserWindow({
-        width: 1500,
-        height: 800,
+        width: 1000,
+        height: 500,
         'minWidth': 1200,
         'minHeight': 700,
         webPreferences: {
@@ -23,7 +25,7 @@ app.on('ready', function () {
 
     mainWindow.loadURL(url.format({
         //pathname: path.join(__dirname, 'mainWindow.html'),
-        pathname: path.join(__dirname, './components/index.html'),
+        pathname: path.join(__dirname, './components/main.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -66,6 +68,25 @@ ipcMain.on('item:add', function (e, item) {
     console.log(item);
     mainWindow.webContents.send('item:add', item);
     addWindow.close();
+});
+
+//catch declaration:add
+ipcMain.on('declaration:add', function (e, declaration) {
+    var connection = mysql.createConnection({
+        host     : 'localhost',
+        user     : 'admin',
+        password : 'uatao',
+        database : 'shop_db'
+    });
+
+    sql = `INSERT INTO declarations (sender, receiver) VALUES ( '${declaration.sender}',  '${declaration.receiver}')`;
+
+    connection.query(sql, function (error, results, fields) {
+        if (error) throw error;
+        console.log('Inserted');
+        mainWindow.webContents.send('declaration:add', declaration);
+    });
+
 });
 
 //menu
