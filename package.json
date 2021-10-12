@@ -14,7 +14,7 @@
   "dependencies": {
     "ejs": "^3.0.1",
     "ejs-electron": "^2.0.3",
-    "electron": "^8.0.0",
+    "electron": "^11.5.0",
     "electron-packager": "^14.2.1",
     "jquery": "^3.4.1",
     "mysql": "^2.18.1",
